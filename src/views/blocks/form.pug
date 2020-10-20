@@ -1,0 +1,74 @@
+section.KvitForm-Outer
+  .KvitForm
+    h3.KvitForm-Title Заполните поля для формирования квитанции
+    form.KvitForm-Form(action="#")
+
+      .KvitForm-Group
+        p.KvitForm-Text ФИО получателя услуг (обучающегося и др.), за которого вносится плата
+        .KvitForm-Field
+          label.KvitForm-Label(for="lastname") Фамилия
+            span.KvitForm-Required *
+          br
+          input.KvitForm-Input(type="text" id="lastname" name="lastname" placeholder="Фамилия" required)
+        .KvitForm-Field
+          label.KvitForm-Label(for="firstname") Имя
+            span.KvitForm-Required *
+          br
+          input.KvitForm-Input(type="text" id="firstname" name="firstname" placeholder="Имя" required)
+        .KvitForm-Field
+          label.KvitForm-Label(for="middlename") Отчество
+            span.KvitForm-Required *
+          br
+          input.KvitForm-Input(type="text" id="middlename" name="middlename" placeholder="Отчество" required)
+      .KvitForm-Field
+        label.KvitForm-Label(for="dogNumber") Номер договора
+          span.KvitForm-Required *
+        br
+        input.KvitForm-Input(type="text" id="dogNumber" name="dogNumber" placeholder="Номер договора" required)
+
+      .KvitForm-Group
+        p.KvitForm-Text Сумма платежа
+        .KvitForm-Field
+          label.KvitForm-Label(for="sumRub") Рубли
+            span.KvitForm-Required *
+          br
+          input.KvitForm-Input(type="number" id="sumRub" name="sumRub" placeholder="Рубли" required)
+        .KvitForm-Field
+          label.KvitForm-Label(for="sumKop") Копейки
+            span.KvitForm-Required *
+          br
+          input.KvitForm-Input(type="number" id="sumKop" name="sumKop" placeholder="Копейки" min="0" max="99" required)
+      .KvitForm-Field
+        label.KvitForm-Label(for="paymPeriod") Период, за который вносится плата
+          span.KvitForm-Required *
+        br
+        input.KvitForm-Input(type="text" id="paymPeriod" name="paymPeriod" placeholder="Период, за который вносится плата" required)
+      .KvitForm-Field
+        label.KvitForm-Label(for="purpose") За что вносится плата (услуга)
+          span.KvitForm-Required *
+        br
+        select.KvitForm-Select(id="purpose" name="purpose" required)
+          option(value="Платное обучение") Платное обучение
+          option(value="Проживание в общежитии") Проживание в общежитии
+      .KvitForm-Field
+        label.KvitForm-Label(for="department") Факультет, общежитие, другой отдел
+          span.KvitForm-Required *
+        br
+        select.KvitForm-Select(id="department" name="department" required)
+          option(value="Агрономический факультет") Агрономический факультет
+          option(value="Биологический факультет") Биологический факультет
+          option(value="Факультет ветеринарной медицины") Факультет ветеринарной медицины
+          option(value="Инженерный факультет") Инженерный факультет
+          option(value="Экономический факультет") Экономический факультет
+          option(value="Курсы подготовки водителей") Курсы подготовки водителей
+          option(value="Финансово-экономический колледж") Финансово-экономический колледж
+          option(value="Отделение 2-го высшего образования ЭФ") Отделение 2-го высшего образования ЭФ
+          option(value="Отдел аспирантуры") Отдел аспирантуры
+          option(value="Центр ДО (школьники)- центр карьеры и профориентации") Центр ДО (школьники)- центр карьеры и профориентации
+          option(value="Центр ПППКС (проф. переподг.и повыш. квал.спец.-тов)") Центр ПППКС (проф. переподг.и повыш. квал.спец.-тов)
+          option(value="Общежитие повышенной комфортности") Общежитие повышенной комфортности
+      .KvitForm-Field
+        label.KvitForm-Label(for="payer") Плательщик (заказчик по договору)
+        br
+        input.KvitForm-Input(type="text" id="payer" name="payer" placeholder="Плательщик")
+      button.KvitForm-Button(type="submit") Сформировать квитанцию

@@ -1,0 +1,108 @@
+@media print {
+  @page {
+    //margin: 0 17mm 0 15mm;
+    margin: 10mm;
+  }
+
+  body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  /* .Modal {
+    position: relative;
+    width: 1000px;
+    height: 3000px;
+    padding: 0;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    //overflow: auto;
+
+    &-Header {
+      visibility: hidden;
+    }
+
+    &-Text,
+    &-Text * {
+      visibility: visible;
+    }
+  } */
+
+  .Kvit {
+    &-Side {
+      width: 5%;
+    }
+    &-EkzText {
+      width: 310px;
+      height: 60px;
+      left: -90px;
+      top: 140px;
+      font-size: 0.7rem;
+    }
+
+    &-After {
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      & > p {
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  .KvitTable {
+    width: 91%;
+    &-Row {
+      min-height: 20px;
+    }
+
+    &-SecondCol {
+      width: 57.2%;
+      &_2Col {
+        width: 95%;
+      }
+    }
+
+    &-Qr {
+      width: 182px;
+      height: 182px;
+      margin: 10px;
+      //background-color: teal;
+
+      &_Fake {
+        /* width: 200px;
+        height: 200px; */
+        width: 100%;
+        height: auto;
+        //background-color: red;
+      }
+
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .Header,
+  .Footer,
+  .KvitForm-Outer,
+  .Modal-Outer {
+    visibility: hidden;
+  }
+
+  .printForm-Outer,
+  .printForm-Outer * {
+    visibility: visible;
+  }
+  .printForm-Outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
